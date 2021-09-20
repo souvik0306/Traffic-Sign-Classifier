@@ -1,7 +1,7 @@
 import cv2 as cv
-
+import imageio
 cap = cv.VideoCapture(r'D:\Autonomous-Guided-Vehicle\Resources\highway.mp4')
-# out = cv.VideoWriter('mask_output.mp4',cv.VideoWriter_fourcc(*'XVID'), 10, (700,500))
+out = cv.VideoWriter('contour_output.mp4',cv.VideoWriter_fourcc(*'XVID'), 10, (700,500))
 
 object_detector = cv.createBackgroundSubtractorMOG2()
 while True:
@@ -15,7 +15,7 @@ while True:
         area = cv.contourArea(cnt)
         if area > 150:  #150 pixels
             cv.drawContours(frame,[cnt],-1,(0,255,0),thickness=2)
-
+    out.write(frame)
     cv.imshow("Mask",frame)
     key = cv.waitKey(30)
     if key == 27:
