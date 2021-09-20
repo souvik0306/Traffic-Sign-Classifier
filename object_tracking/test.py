@@ -1,7 +1,7 @@
 import cv2 as cv
 import imageio
 cap = cv.VideoCapture(r'D:\Autonomous-Guided-Vehicle\Resources\highway.mp4')
-out = cv.VideoWriter('contour_output.mp4',cv.VideoWriter_fourcc(*'XVID'), 10, (700,500))
+out = cv.VideoWriter('contour_output.wmv',cv.VideoWriter_fourcc(*'XVID'), 10, (700,500))
 
 object_detector = cv.createBackgroundSubtractorMOG2()
 while True:
