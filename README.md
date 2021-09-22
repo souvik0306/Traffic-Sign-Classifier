@@ -15,3 +15,7 @@ Countour Map of the Region of Interest (ROI) -
 Numbered Map of the Region of Interest (ROI) -  
 
 <img src="https://github.com/souvik0306/Autonomous-Guided-Vehicle/blob/master/Resources/numbered.gif" width="600" height="300">
+
+For this repository I have made use of some amazing resources - 
+
+Object Tracking PySource - [YouTube](https://www.youtube.com/watch?v=O3b8lVF93jU&list=LL&index=1&ab_channel=Pysource)
