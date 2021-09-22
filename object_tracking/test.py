@@ -18,9 +18,9 @@ while True:
     # Object Detection
     mask = object_detector.apply(roi)
     _, mask = cv.threshold(mask, 254, 255, cv.THRESH_BINARY)
-    countours, _ = cv.findContours(mask, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv.findContours(mask, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
     detections = []
-    for cnt in countours:
+    for cnt in contours:
         area = cv.contourArea(cnt)
         if area > 150:  # 150 pixels
             # cv.drawContours(roi,[cnt],-1,(0,255,0),thickness=2)
