@@ -11,3 +11,7 @@ Countour Map of the Entire Video Frame -
 Countour Map of the Region of Interest (ROI) - 
 
 <img src="https://github.com/souvik0306/Autonomous-Guided-Vehicle/blob/master/Resources/roioutput.gif" width="600" height="300">
+
+Numbered Map of the Region of Interest (ROI) -  
+
+<img src="https://github.com/souvik0306/Autonomous-Guided-Vehicle/blob/master/Resources/numbered.gif" width="600" height="300">
