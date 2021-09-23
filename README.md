@@ -20,4 +20,3 @@ For this repository I have made use of some amazing resources -
 
 Object Tracking PySource - [YouTube](https://www.youtube.com/watch?v=O3b8lVF93jU&list=LL&index=1&ab_channel=Pysource)
 
-https://user-images.githubusercontent.com/55232104/134464819-bfaa2b55-1d20-4096-911b-019669ada9e9.mp4
