@@ -5,7 +5,8 @@ Autonomous Braking in a vehicle in governed by certain key parameters -
 2. ***Obstacle's Distance Estimation*** - Assesment of an obstacles distance from a particular point is fudamental for autonomous braking.
 3. ***Obstacle's Speed Evaluation*** - Finding the relative speed between these two players is crucial for approximating stopping time and required deaccelation amount.
 
-Obstacle Detection uses [`cv2.findContours`](https://docs.opencv.org/3.4.15/df/d0d/tutorial_find_contours.html)  to isolate contours in a masked image and sort out those which are above a certain threshold/value. 
+Obstacle Detection uses [`cv2.findContours`](https://docs.opencv.org/3.4.15/df/d0d/tutorial_find_contours.html)  to isolate contours in a masked image and sort out those which are above a certain threshold/value.
+
 The function accepts three positional arguments `cv2.findContours(image,cv.RETR_TREE,cv.CHAIN_APPROX_SIMPLE)` -
 1. First argument takes in the source image/frame 
 2. Second one is contour retrieval mode
