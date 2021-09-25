@@ -1,9 +1,9 @@
 ### Autonomous-Guided-Vehicle
 
-Autonomous Braking in a vehicle in governed by certain key parameters - 
+Autonomous Braking in a vehicle is governed by certain key parameters - 
 1. ***Obstacle Detection & Tracking*** - This revolves around identifying common objects in the path of a car.
-2. ***Obstacle's Distance Estimation*** - Assesment of an obstacles distance from a particular point is fudamental for autonomous braking.
-3. ***Obstacle's Speed Evaluation*** - Finding the relative speed between these two players is crucial for approximating stopping time and required deaccelation amount.
+2. ***Obstacle's Distance Estimation*** - Assessment of the distance of an obstacle from a particular point is fundamental for autonomous braking.
+3. ***Obstacle's Speed Evaluation*** - Finding the relative speed between these two players is crucial for approximating stopping time and the required deacceleration amount.
 
 Obstacle Detection uses [`cv2.findContours`](https://docs.opencv.org/3.4.15/df/d0d/tutorial_find_contours.html)  to isolate contours in a masked image and sort out those which are above a certain threshold/value.
 
