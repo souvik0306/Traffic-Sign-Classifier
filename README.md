@@ -12,6 +12,10 @@ The function accepts three positional arguments `cv2.findContours(image,cv.RETR_
 2. Second one is contour retrieval mode
 3. Third argument is contour's approximation
 
+Pedestrian Detection - 
+
+<img src="https://github.com/souvik0306/Autonomous-Guided-Vehicle/blob/master/Resources/Pedestrian.gif" width="600" height="300">
+
 Countour Map of the Region of Interest (ROI) - 
 
 <img src="https://github.com/souvik0306/Autonomous-Guided-Vehicle/blob/master/Resources/roioutput.gif" width="600" height="300">
