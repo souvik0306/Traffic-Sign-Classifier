@@ -10,7 +10,7 @@ while cap.isOpened():
     frame = cv.resize(frame,(700,500))
     gray = cv.cvtColor(frame,cv.COLOR_BGR2GRAY)
 
-    bodies = body_classifier.detectMultiScale(gray,1.6,4)
+    bodies = body_classifier.detectMultiScale(gray,1.6,3)
 
     for (x,y,w,h) in bodies:
         cv.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
