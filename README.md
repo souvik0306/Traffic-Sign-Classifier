@@ -7,6 +7,8 @@ Autonomous Braking in a vehicle is governed by certain key parameters -
 
 Pedestrian Detection - 
 
+For Pedestrian Detection we make use of the [`haarcascade_fullbody`](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_fullbody.xml) module from OpenCV.
+
 <img src="https://github.com/souvik0306/Autonomous-Guided-Vehicle/blob/master/Resources/Pedestrian.gif" width="600" height="300">
 
 > Obstacle Detection uses [`cv2.findContours`](https://docs.opencv.org/3.4.15/df/d0d/tutorial_find_contours.html)  to isolate contours in a masked image and sort out those which are above a certain threshold/value.
