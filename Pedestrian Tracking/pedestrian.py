@@ -1,26 +1,42 @@
-import cv2 as cv
-import numpy as np
-
-body_classifier = cv.CascadeClassifier(r'D:\Autonomous-Guided-Vehicle\Pedestrian Tracking\haarcascade_fullbody.xml')
-
-cap = cv.VideoCapture(r'D:\Autonomous-Guided-Vehicle\Resources\street2.wmv')
-#out = cv.VideoWriter('Pedestrian.mp4', cv.VideoWriter_fourcc(*'m', 'p', '4', 'v'), 20, (700, 500))
-
-while cap.isOpened():
-    _,frame = cap.read()
-    frame = cv.resize(frame,(700,500))
-    gray = cv.cvtColor(frame,cv.COLOR_BGR2GRAY)
-
-    bodies = body_classifier.detectMultiScale(gray,1.6,3)
-
-    for (x,y,w,h) in bodies:
-        cv.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
-        cv.imshow("Frames",frame)
-        #out.write(frame)
-
-    if cv.waitKey(1) == 13:
+import cv2
+import imutils
+   
+# Initializing the HOG person
+# detector
+hog = cv2.HOGDescriptor()
+hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+   
+cap = cv2.VideoCapture(0)
+   
+while True:
+    # Reading the video stream
+    ret, image = cap.read()
+    if ret:
+        image = imutils.resize(image, 
+                               width=min(400, image.shape[1]))
+   
+        # Detecting all the regions 
+        # in the Image that has a 
+        # pedestrians inside it
+        (regions, _) = hog.detectMultiScale(image,
+                                            winStride=(4, 4),
+                                            padding=(4, 4),
+                                            scale=1.05)
+   
+        # Drawing the regions in the 
+        # Image
+        for (x, y, w, h) in regions:
+            cv2.rectangle(image, (x, y),
+                          (x + w, y + h), 
+                          (0, 0, 255), 2)
+   
+        # Showing the output Image
+        cv2.imshow("Image", image)
+        if cv2.waitKey(25) & 0xFF == ord('q'):
+            break
+    else:
         break
-cv.destroyAllWindows()
+  
 cap.release()
-#out.release()
+cv2.destroyAllWindows()
 
