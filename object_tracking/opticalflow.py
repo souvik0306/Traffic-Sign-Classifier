@@ -1,7 +1,7 @@
 import numpy as np
 import cv2 as cv
 
-cap = cv.VideoCapture(r'D:\Autonomous-Guided-Vehicle\Resources\street3.wmv')
+cap = cv.VideoCapture(r'Resources\street3.wmv')
 
 feature_params = dict(maxCorners=100, qualityLevel=0.3, minDistance=7, blockSize=7)
 
