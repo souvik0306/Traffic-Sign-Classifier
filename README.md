@@ -5,6 +5,11 @@ Autonomous Braking in a vehicle is governed by certain key parameters -
 2. ***Obstacle's Distance Estimation*** - Assessment of the distance of an obstacle from a particular point is fundamental for autonomous braking.
 3. ***Obstacle's Speed Evaluation*** - Finding the relative speed between these two players is crucial for approximating stopping time and the required deacceleration amount.
 
+
+Lane Detection - 
+
+<img src="https://github.com/souvik0306/Autonomous-Guided-Vehicle/blob/master/Resources/lane_detected.png" width="600" height="300">
+
 Pedestrian Detection - 
 
 For Pedestrian Detection we make use of the [`haarcascade_fullbody`](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_fullbody.xml) module from OpenCV.
