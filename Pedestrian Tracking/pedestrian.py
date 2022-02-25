@@ -6,7 +6,7 @@ import imutils
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
    
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(r'D:\3D-Object-Detection\WhatsApp Video 2021-12-07 at 15.27.55.mp4')
    
 while True:
     # Reading the video stream
